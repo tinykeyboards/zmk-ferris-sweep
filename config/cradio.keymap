@@ -20,6 +20,15 @@
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
         };
+        ht2: hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <250>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <100>;
+            bindings = <&kp>, <&kp>;
+        };
         skq: sticky_key_quick_release {
                 compatible = "zmk,behavior-sticky-key";
                 #binding-cells = <1>;
@@ -53,7 +62,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
           &ht LSHFT Z   &kp X     &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT  &ht LSHFT FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &lt 1 TAB  &ht LCTRL ESC  &ht LGUI SPACE &lt 2 BSPC
+                                            &lt 1 TAB  &ht2 LCTRL ESC  &ht2 LGUI SPACE &lt 2 BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
