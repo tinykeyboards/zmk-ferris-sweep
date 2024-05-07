@@ -102,7 +102,7 @@
           &skq LALT  &skq LGUI  &skq LSHFT &skq LCTRL &bt BT_SEL 1    &trans    &kp LEFT    &kp DOWN   &kp UP      &kp RIGHT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │PROFILE 2 │   │          │          │          │          │          │
-            &none       &none     &none      &none    &bt BT_SEL 2    &PSCRN     &none     &none      &none      &none
+            &none       &none     &none      &none    &bt BT_SEL 2    &kp PSCRN     &none     &none      &none      &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &none          &none       &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
