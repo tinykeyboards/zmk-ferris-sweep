@@ -20,7 +20,7 @@
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
         };
-        ht2: hold_tap {
+        sht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
@@ -62,7 +62,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
           &ht LSHFT Z   &kp X     &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT  &ht LSHFT FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &lt 1 TAB  &ht2 LCTRL ESC  &ht2 LGUI SPACE &lt 2 BSPC
+                                            &lt 1 TAB  &sht LCTRL ESC  &sht LGUI SPACE &lt 2 BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
