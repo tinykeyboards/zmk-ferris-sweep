@@ -48,12 +48,12 @@
             &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ ; :      │
-            &kp A      &kp S      &kp D      &kp F      &kp G          &kp H      &kp J      &kp K      &kp L      &ht RETURN SEMI
+            &kp A      &kp S      &kp D      &kp F      &kp G          &kp H      &kp J      &kp K      &kp L      &ht SEMI RETURN
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
-          &ht LSHFT Z  &kp X     &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT  &ht LSHFT FSLH
+          &ht Z LSHFT   &kp X     &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT  &ht FSLH LSHFT
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &lt 1 TAB  &ht LCTRL ESC  &ht LGUI SPACE  &lt 2 BSPC
+                                            &lt 1 TAB  &ht ESC LCTRL  &ht SPACE LGUI &lt 2 BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
