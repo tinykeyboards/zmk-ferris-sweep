@@ -83,10 +83,10 @@
 
         fnc {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans    &trans  &trans
+&kp ESCAPE     &trans         &trans           &trans             &trans            &kp PAGE_UP        &kp HOME        &kp UP_ARROW  &kp END    &trans
+&skq LEFT_ALT  &skq LEFT_GUI  &skq LEFT_SHIFT  &skq LEFT_CONTROL  &skq RIGHT_ALT    &kp PAGE_DOWN      &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp DELETE
+&kp LC(Z)      &kp LC(X)      &kp LC(C)        &kp TAB            &kp LC(V)         &kp LC(BACKSPACE)  &kp BACKSPACE   &trans        &trans     &trans
+                                               &trans             &trans            &kp RET            &trans
             >;
         };
 
