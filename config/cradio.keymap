@@ -92,10 +92,10 @@
 
         numpad {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans    &trans  &trans
+&none             &none            &none              &none                  &kp EQUAL     &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS
+&kp LESS_THAN     &kp LEFT_BRACE   &kp LEFT_BRACKET   &kp LEFT_PARENTHESIS   &kp COMMA     &kp SLASH     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS
+&kp GREATER_THAN  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp PERIOD    &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp RET
+                                                      &trans                 &trans        &trans        &trans
             >;
         };
 
