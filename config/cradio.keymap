@@ -58,6 +58,36 @@
         };
     };
 
+    macros {
+        question_mark: question_mark {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RIGHT_ALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N1 &kp N9 &kp N1>,
+                <&macro_release>,
+                <&kp RIGHT_ALT>;
+
+            label = "QUESTION_MARK";
+        };
+
+        exclamation_mark: exclamation_mark {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RIGHT_ALT>,
+                <&macro_tap>,
+                <&kp N1 &kp N7 &kp N3>,
+                <&macro_release>,
+                <&kp RIGHT_ALT>;
+
+            label = "EXCLAMATION_MARK";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -81,10 +111,10 @@
 
         sym1 {
             bindings = <
-&kp EXCL  &kp AT     &kp HASH  &kp DOLLAR  &none      &kp QUESTION     &kp PERCENT  &kp CARET  &kp AMPS   &kp ASTRK
-&kp PLUS  &kp LBRC   &kp LBKT  &kp LPAR    &kp SQT    &kp DQT          &kp RPAR     &kp RBKT   &kp RBRC   &kp EQUAL
-&none     &kp GRAVE  &kp BSLH  &kp MINUS   &none      &kp EXCLAMATION  &kp UNDER    &kp PIPE   &kp TILDE  &none
-                               &mo 3       &trans     &trans           &trans
+&kp EXCL  &kp AT     &kp HASH  &kp DOLLAR  &question_mark       &kp QUESTION     &kp PERCENT  &kp CARET  &kp AMPS   &kp ASTRK
+&kp PLUS  &kp LBRC   &kp LBKT  &kp LPAR    &kp SQT              &kp DQT          &kp RPAR     &kp RBKT   &kp RBRC   &kp EQUAL
+&none     &kp GRAVE  &kp BSLH  &kp MINUS   &exclamation_mark    &kp EXCLAMATION  &kp UNDER    &kp PIPE   &kp TILDE  &none
+                               &mo 3       &trans               &trans           &trans
             >;
         };
 
