@@ -63,9 +63,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press &kp RIGHT_ALT>,
+                <&macro_press &kp LEFT_ALT>,
                 <&macro_tap &kp N0 &kp N1 &kp N9 &kp N1>,
-                <&macro_release &kp RIGHT_ALT>;
+                <&macro_release &kp LEFT_ALT>;
             label = "QUESTION_MARK";
         };
 
@@ -73,9 +73,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press &kp RIGHT_ALT>,
+                <&macro_press &kp LEFT_ALT>,
                 <&macro_tap &kp N1 &kp N7 &kp N3>,
-                <&macro_release &kp RIGHT_ALT>;
+                <&macro_release &kp LEFT_ALT>;
 
             label = "EXCLAMATION_MARK";
         };
