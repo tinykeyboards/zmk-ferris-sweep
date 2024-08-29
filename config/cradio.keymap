@@ -42,12 +42,19 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 
-        tri_layer {
-            if-layers = <1 2>;
-            then-layer = <5>;
+    combos {
+        compatible = "zmk,combos";
+
+        numpad {
+            bindings = <&tog 4>;
+            key-positions = <33 32>;
+        };
+
+        settings {
+            bindings = <&mo 5>;
+            key-positions = <30 31>;
         };
     };
 
@@ -56,10 +63,10 @@
 
         default_layer {
             bindings = <
-&kp Q        &kp W  &kp E  &kp R      &kp T             &kp Y            &kp U       &kp I      &kp O    &kp P
-&kp A        &kp S  &kp D  &kp F      &kp G             &kp H            &kp J       &kp K      &kp L    &ht SEMI RETURN
-&ht LSHFT Z  &kp X  &kp C  &kp V      &kp B             &kp N            &kp M       &kp COMMA  &kp DOT  &ht LSHFT FSLH
-                           &lt 1 TAB  &sht LCTRL ESC    &sht LGUI SPACE  &lt 2 BSPC
+&kp Q  &kp W  &kp E  &kp R  &kp T             &kp Y      &kp U  &kp I      &kp O    &kp P
+&kp A  &kp S  &kp D  &kp F  &kp G             &kp H      &kp J  &kp K      &kp L    &ht SEMI RETURN
+&kp Z  &kp X  &kp C  &kp V  &kp B             &kp N      &kp M  &kp COMMA  &kp DOT  &kp SLASH
+                     &sl 1  &kp LEFT_SHIFT    &kp SPACE  &sl 2
             >;
         };
 
@@ -68,7 +75,7 @@
 &kp F1        &kp F2        &kp F3  &kp F4  &kp F5    &kp F6   &kp F7   &kp F8  &kp F9  &kp F10
 &kp N1        &kp N2        &kp N3  &kp N4  &kp N5    &kp N6   &kp N7   &kp N8  &kp N9  &kp N0
 &kp C_VOL_DN  &kp C_VOL_UP  &none   &none   &none     &kp F11  &kp F12  &none   &none   &none
-                                    &trans  &none     &none    &trans
+                                    &trans  &trans    &trans   &mo 3
             >;
         };
 
@@ -77,16 +84,16 @@
 &kp EXCL  &kp AT     &kp HASH  &kp DOLLAR  &none      &kp QUESTION     &kp PERCENT  &kp CARET  &kp AMPS   &kp ASTRK
 &kp PLUS  &kp LBRC   &kp LBKT  &kp LPAR    &kp SQT    &kp DQT          &kp RPAR     &kp RBKT   &kp RBRC   &kp EQUAL
 &none     &kp GRAVE  &kp BSLH  &kp MINUS   &none      &kp EXCLAMATION  &kp UNDER    &kp PIPE   &kp TILDE  &none
-                               &trans      &none      &none            &trans
+                               &mo 3       &trans     &trans           &trans
             >;
         };
 
         fnc {
             bindings = <
 &kp ESCAPE     &trans         &trans           &trans             &trans            &kp PAGE_UP        &kp HOME        &kp UP_ARROW  &kp END    &caps_word
-&skq LEFT_ALT  &skq LEFT_GUI  &skq LEFT_SHIFT  &skq LEFT_CONTROL  &skq RIGHT_ALT    &kp PAGE_DOWN      &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp DELETE
-&kp LC(Z)      &kp LC(X)      &kp LC(C)        &kp TAB            &kp LC(V)         &kp LC(BACKSPACE)  &kp BACKSPACE   &trans        &trans     &kp PSCRN
-                                               &trans             &trans            &kp RET            &trans
+&skq LEFT_ALT  &skq LEFT_GUI  &skq LEFT_SHIFT  &skq LEFT_CONTROL  &skq RIGHT_ALT    &kp PAGE_DOWN      &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp ENTER
+&kp LC(Z)      &kp LC(X)      &kp LC(C)        &kp TAB            &kp LC(V)         &kp LC(BACKSPACE)  &kp BACKSPACE   &kp DEL       &trans     &kp PSCRN
+                                               &none              &none             &none              &none
             >;
         };
 
@@ -95,16 +102,16 @@
 &none             &none            &none              &none                  &kp EQUAL     &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS
 &kp LESS_THAN     &kp LEFT_BRACE   &kp LEFT_BRACKET   &kp LEFT_PARENTHESIS   &kp COMMA     &kp SLASH     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS
 &kp GREATER_THAN  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp PERIOD    &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp RET
-                                                      &trans                 &trans        &trans        &trans
+                                                      &none                  &none         &none         &none
             >;
         };
 
         settings {
             bindings = <
-&bootloader  &none  &none  &bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 3  &none   &none  &none  &bootloader
-&none        &none  &none  &none       &bt BT_SEL 1    &bt BT_SEL 4  &none   &none  &none  &none
-&none        &none  &none  &none       &bt BT_SEL 2    &none         &none   &none  &none  &none
-                           &trans      &none           &none         &trans
+&bootloader  &none  &none  &bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 3  &none  &none  &none  &bootloader
+&none        &none  &none  &none       &bt BT_SEL 1    &bt BT_SEL 4  &none  &none  &none  &none
+&none        &none  &none  &none       &bt BT_SEL 2    &none         &none  &none  &none  &none
+                           &none       &none           &none         &none
             >;
         };
     };
